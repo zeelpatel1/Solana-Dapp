@@ -3,6 +3,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from './ui/tabs'
 import { Plus, Send, Zap } from 'lucide-react'
 import Airdrop from './Airdrop'
 import Balance from './Balance'
+import SendTransaction from './SendTransaction'
 
 const Nav = () => {
   return (
@@ -54,7 +55,7 @@ const Nav = () => {
 
         <TabsContent value="send">
           {/* Replace with actual send component */}
-          <div className="text-center text-gray-500">Send Component Here</div>
+          <SendTransaction/>
         </TabsContent>
 
         <TabsContent value="mint">

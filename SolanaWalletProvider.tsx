@@ -13,7 +13,7 @@ export const SolanaWalletProvider = ({children}:{children:React.ReactNode}) => {
     const endpoint=useMemo(()=>process.env.NEXT_PUBLIC_SOLANA_URL1 as string,[])
 
     return (
-        <ConnectionProvider endpoint={endpoint}>
+        <ConnectionProvider endpoint={"https://api.devnet.solana.com"}>
             <WalletProvider wallets={[]} autoConnect>
                 <WalletModalProvider>
                 <div className="flex justify-center">
