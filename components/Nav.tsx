@@ -4,6 +4,7 @@ import { Plus, Send, Zap } from 'lucide-react'
 import Airdrop from './Airdrop'
 import Balance from './Balance'
 import SendTransaction from './SendTransaction'
+import Mint from './Mint'
 
 const Nav = () => {
   return (
@@ -60,7 +61,7 @@ const Nav = () => {
 
         <TabsContent value="mint">
           {/* Replace with actual mint component */}
-          <div className="text-center text-gray-500">Mint Component Here</div>
+          <Mint/>
         </TabsContent>
       </Tabs>
     </div>
