@@ -12,6 +12,20 @@ import {
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 
+// export const metadata:Metadata = {
+//   title: "Solana Airdrop | Devnet Faucet",
+//   description: "Send free SOL to any wallet on Solana devnet using a quick airdrop tool.",
+//   keywords: ["Solana", "Airdrop", "Devnet", "Faucet", "SOL"],
+//   openGraph: {
+//     title: "Solana Devnet Airdrop Tool",
+//     description: "Send free SOL tokens on devnet instantly.",
+//     url: "",
+//     siteName: "Solana Faucet",
+//     type: "website",
+//   }
+// };
+
+
 const Airdrop = () => {
   const { connection } = useConnection();
   const { publicKey } = useWallet();

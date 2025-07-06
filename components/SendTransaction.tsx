@@ -11,12 +11,26 @@ import { Input } from "./ui/input";
 import { Button } from "./ui/button";  
 import { LAMPORTS_PER_SOL, PublicKey, SystemProgram, Transaction } from '@solana/web3.js';
 
+
+// export const metadata:Metadata = {
+//   title: "Send SOL | Solana Transfer Tool",
+//   description: "Transfer SOL from your wallet to any Solana address easily.",
+//   keywords: ["Solana", "Send SOL", "Transaction", "Transfer", "Wallet", "Crypto"],
+//   openGraph: {
+//     title: "Send SOL on Solana",
+//     description: "Instantly send SOL from your wallet to any Solana address.",
+//     url: "",
+//     siteName: "Solana Tools",
+//     type: "website",
+//   }
+// };
+
+
 const SendTransaction = () => {
     const {connection}=useConnection()
     const {publicKey, sendTransaction}=useWallet()
 
     const [toAddress,setToAddress]=useState('')
-    const [fromAddress,setFromAddress]=useState('')
     const [amount,setAmount]=useState("")
     const [loading,setLoading]=useState(false)
 

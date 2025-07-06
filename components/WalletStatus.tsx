@@ -5,6 +5,19 @@ import { Card,CardHeader,CardTitle,CardDescription,CardContent } from './ui/card
 import { Wallet,Shield,Zap,TrendingUp } from 'lucide-react'
 import Nav from './Nav'
 
+// export const metadata:Metadata = {
+//   title: "Wallet Connection | Solana DApp",
+//   description: "Securely connect your Solana wallet to access DApp features like minting, transfers, and airdrops.",
+//   keywords: ["Solana", "wallet", "connect", "web3", "blockchain", "mint", "token", "dapp"],
+//   openGraph: {
+//     title: "Connect Your Wallet - Solana DApp",
+//     description: "Easily connect your Solana wallet and explore features like token minting and transfers.",
+//     url: "", 
+//     siteName: "Solana DApp",
+//     type: "website",
+//   }
+// }
+
 const WalletStatus = () => {
     const {publicKey}=useWallet()
 

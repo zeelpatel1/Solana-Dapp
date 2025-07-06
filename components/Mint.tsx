@@ -15,8 +15,21 @@ import {
   TYPE_SIZE,
 } from "@solana/spl-token";
 import { createInitializeInstruction, pack } from "@solana/spl-token-metadata";
-
 import { uploadImageAndMetadata } from "./uploadToPinata";
+
+
+// export const metadata = {
+//   title: "Create Solana Token | My Dapp",
+//   description: "Mint your own custom SPL Token on Solana using Token-2022.",
+//   keywords: ["Solana", "SPL Token", "Mint", "Token-2022", "Dapp"],
+//   openGraph: {
+//     title: "Create Solana Token",
+//     description: "Mint your own custom SPL Token on Solana.",
+//     url: "",
+//     siteName: "My Dapp",
+//     type: "website",
+//   }
+// };
 
 const Mint = () => {
   const { wallet, publicKey, sendTransaction } = useWallet();
@@ -63,7 +76,7 @@ const Mint = () => {
 
     try {
 
-      const { imageURI, metadataURI } = await uploadImageAndMetadata(
+      const { metadataURI } = await uploadImageAndMetadata(
         data.imageFile,
         data.name,
         data.symbol,

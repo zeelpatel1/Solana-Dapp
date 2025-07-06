@@ -1,12 +1,30 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
-import { useWallet, useConnection } from '@solana/wallet-adapter-react';
+import React, { useEffect, useState } from "react";
+import { useWallet, useConnection } from "@solana/wallet-adapter-react";
 import {
-  Card, CardHeader, CardTitle, CardContent, CardFooter
-} from './ui/card';
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+  CardFooter,
+} from "./ui/card";
 import { Button } from "@/components/ui/button";
-import { LAMPORTS_PER_SOL } from '@solana/web3.js';
+import { LAMPORTS_PER_SOL } from "@solana/web3.js";
+
+
+// export const metadata:Metadata = {
+//   title: "Wallet Balance | Solana DApp",
+//   description: "Check your wallet balance and refresh it on Solana Devnet.",
+//   openGraph: {
+//     title: "Wallet Balance | Solana DApp",
+//     description: "Check your wallet balance and refresh it on Solana Devnet.",
+//     url: "",
+//     siteName: "Solana DApp",
+//     type: "website",
+//   },
+// };
+
 
 const Balance = () => {
   const { connection } = useConnection();
@@ -29,7 +47,9 @@ const Balance = () => {
   };
 
   useEffect(() => {
-    if (publicKey) fetchBalance();
+    if (publicKey){
+      fetchBalance();
+    }
   }, [publicKey, connection]);
 
   return (
@@ -50,10 +70,10 @@ const Balance = () => {
             )
           ) : (
             <div className="flex flex-col items-center justify-center h-10">
-  <p className="text-xl text-red-400 text-center font-semibold">
-    Connect your wallet to see balance
-  </p>
-</div>
+              <p className="text-xl text-red-400 text-center font-semibold">
+                Connect your wallet to see balance
+              </p>
+            </div>
           )}
         </CardContent>
 
